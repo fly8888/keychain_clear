@@ -10,19 +10,10 @@
 
 一.授权文件中添加通配符，允许访问所有应用的keychain信息
 
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-    <dict>
-        <key>keychain-access-groups</key>
-        <array>
-            <string>*</string>
-        </array>
-    </dict>
-</plist>
 
 
-二.钥匙串保存信息分析\n
+二.钥匙串保存信息分析
+
 说明:
 
 每一个keyChain的组成如图,整体是一个字典结构. 
@@ -35,23 +26,23 @@
 
 存储主要类型：
 
-/密钥类型键
+    密钥类型键
 
-//CFTypeRef kSecClass
+            CFTypeRef kSecClass
 
-//值
+    密钥类型值
 
-//CFTypeRef kSecClassGenericPassword //一般密码
+            CFTypeRef kSecClassGenericPassword //一般密码
 
-//CFTypeRef kSecClassInternetPassword //网络密码
+            CFTypeRef kSecClassInternetPassword //网络密码
 
-//CFTypeRef kSecClassCertificate //证书
+            CFTypeRef kSecClassCertificate //证书
 
-//CFTypeRef kSecClassKey //密钥
+            CFTypeRef kSecClassKey //密钥
 
-//CFTypeRef kSecClassIdentity //身份证书(带私钥的证书)
+            CFTypeRef kSecClassIdentity //身份证书(带私钥的证书)
 
-//不同类型的钥匙串项对应的属性不同
+    不同类型的钥匙串项对应的属性不同
 
 
 Keychain操作
