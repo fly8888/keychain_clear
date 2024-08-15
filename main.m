@@ -34,11 +34,14 @@ NSArray * getKeychainObjectsForSecClass(CFTypeRef kSecClassType) {
 	[genericQuery setObject:(id)kCFBooleanTrue forKey:(id)kSecReturnData];
 	
 	NSArray *keychainItems = nil;
-	if (SecItemCopyMatching((CFDictionaryRef)genericQuery, (CFTypeRef *)&keychainItems) != noErr)
+	int status = SecItemCopyMatching((CFDictionaryRef)genericQuery, (CFTypeRef *)&keychainItems);
+	if ( status != noErr)
 	{
 		keychainItems = nil;
+		// printToStdOut(@" SecItemCopyMatching Err %d \n",status);
 	}
 	[genericQuery release];
+	// printToStdOut(@" getKeychainObjectsForSecClass keychainItems %@ \n",keychainItems);
 	return keychainItems;
 }
 
