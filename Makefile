@@ -1,5 +1,5 @@
 TARGET := iphone:clang:latest:10.0
-export THEOS_DEVICE_IP = 192.168.31.227
+export THEOS_DEVICE_IP = 192.168.31.89
 export THEOS_DEVICE_PORT = 22
 include $(THEOS)/makefiles/common.mk
 
