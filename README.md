@@ -1,3 +1,5 @@
+
+
 功能：
 
 1.展示钥匙串所有组信息。
@@ -8,7 +10,7 @@
 
 分析:
 
-一.授权文件中添加通配符，允许访问所有应用的keychain信息
+一.授权文件中添加通配符（`*`），允许访问所有应用的keychain信息
 
 
 
@@ -64,7 +66,3 @@ KeyChain中的ItemOSStatus SecItemUpdate(CFDictionaryRef query, CFDictionaryRef 
 // 删除
 
 KeyChain中的ItemOSStatus SecItemDelete(CFDictionaryRef query)
-        
-
-
-
